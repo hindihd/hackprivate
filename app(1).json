@@ -1,0 +1,131 @@
+{
+    "name": "Mirror-X",
+    "description": "Telegram-Direct-Mirror to G-Drive",
+    "logo": "https://telegra.ph/file/55cadc1697ae944a7f432.png",
+    "keywords": [
+      "telegram",
+      "bot",
+      "aria",
+      "python"
+    ],
+    "repository": "https://github.com/ydner/MirrorX",
+    "website": "https://t.me/Userbot_musicybot",
+    "success_url": "https://github.com/ydner/MirrorX",
+    "stack": "container",
+    "env": {
+      "ENV": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+      },
+      "BOT_TOKEN": {
+        "description": "The telegram bot token that you get from @BotFather.",
+        "value": "",
+        "required": true
+      },
+      "GDRIVE_FOLDER_ID": {
+        "description": "This is the folder ID of the Google Drive Folder to which you want to upload all the mirrors.",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "The Telegram user ID (not username) of the owner of the bot.",
+        "value": "",
+        "required": true
+      },  
+      "DOWNLOAD_DIR": {
+        "description": "The path to the local folder where the downloads should be downloaded to.",
+        "value": "/home/username/mirror-bot/downloads",
+        "required": false
+      },
+      "DOWNLOAD_STATUS_UPDATE_INTERVAL": {
+        "description": "A short interval of time in seconds after which the Mirror progress message is updated. (I recommend to keep it 5 seconds at least).",
+        "value": "5",
+        "required":false
+      },      
+      "AUTO_DELETE_MESSAGE_DURATION": {
+        "description": "Interval of time (in seconds), after which the bot deletes it's message (and command message) which is expected to be viewed instantly. Note: Set to -1 to never automatically delete messages.",
+        "value": "-1",
+        "required": false
+      },
+      "IS_TEAM_DRIVE": {
+        "description": "Set to 'True' if GDRIVE_FOLDER_ID is from a Team Drive else False or Leave it empty.",
+        "value": "",
+        "required": false
+      },
+      "TELEGRAM_API": {
+        "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org DO NOT put this in quotes.",
+        "value": "",
+        "required": true
+      },
+      "TELEGRAM_HASH": {
+        "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
+        "value": "",
+        "required": true
+      },
+      "TELEGRAPH_TOKEN": {
+        "description": "Open this link to generate telegraph token ==> https://telegraph-token.sonywegas.repl.run",
+        "value": "",
+        "required": false
+      },
+      "USE_SERVICE_ACCOUNTS": {
+        "description": "Whether to use service accounts or not. For this to work see 'Using service accounts' section below.",
+        "value": "",
+        "required": false
+      },  
+      "INDEX_URL": {
+        "description": "Refer to https://github.com/maple3142/GDIndex/ The URL should not have any trailing '/'.",
+        "value": "",
+        "required": false
+      },
+      "UPTOBOX_TOKEN": {
+        "description": "Uptobox token to mirror uptobox links. Get it from [Uptobox Premium Account](https://uptobox.com/my_account)",
+        "value": "",
+        "required": false  
+      },  
+      "MEGA_API_KEY": {
+        "description": "",
+        "value": "",
+        "required": false
+      },
+      "MEGA_EMAIL_ID": {
+        "description": "",
+        "value": "",
+        "required": false
+      },
+      "MEGA_PASSWORD": {
+        "description": "",
+        "value": "",
+        "required": false
+      }, 
+      "STOP_DUPLICATE_MIRROR": {
+        "description": "(Optional field) (Leave empty if unsure) if this field is set to True, bot will check file in drive, if it is present in drive, downloading will be stopped. (Note - File will be checked using filename, not using filehash, so this feature is not perfect yet) Note: You can limit maximum concurrent downloads by changing the value of MAX_CONCURRENT_DOWNLOADS in aria.sh. By default, it's set to 2.",
+        "value": "",
+        "required": false
+      }, 
+      "BLOCK_MEGA_LINKS": {
+        "description": "(Optional field) If you want to remove mega.nz mirror support (bcoz it's too much buggy and unstable), set it to True.",
+        "value": "",
+        "required": false
+      }, 
+      "USER_SESSION_STRING": {
+        "description": "Open this link to generate session string ==> http://string.projectdils.repl.run",
+        "value": "",
+        "required": true
+      },  
+      "SHORTENER": {
+        "description": "(Optional field) if you want to use shortener in Gdrive and index link, fill shotener url here.",
+        "value": "",
+        "required": false
+      },  
+      "SHORTENER_API": {
+        "description": "(Optional field) Fill your shortener api key if you are using shortener.",
+        "value": "",
+        "required": false
+      }
+    },
+    "addons": [
+      {
+        "plan": "heroku-postgresql"
+      }
+    ]
+}
