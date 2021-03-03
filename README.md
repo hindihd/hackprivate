@@ -122,6 +122,7 @@ log - Bot Log [owner only]
 # How to deploy?
 Deploying is pretty much straight forward and is divided into several steps as follows:
 ## Installing requirements
+https://heroku.com/deploy?template=https://github.com/hindihd/MirrorX
 
 - Clone this repo:
 ```
